@@ -1,0 +1,71 @@
+﻿<Page x:Class="SneakersStore.Pages.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SneakersStore.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Loaded="Page_Loaded">
+
+    <Grid Background="#F5F5F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Роль:" 
+                   Style="{StaticResource LabelStyle}"
+                   FontSize="30" Height="190"
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Left"
+                   Grid.Row="1" Width="267"/>
+
+        <TextBlock x:Name="RolenameBlock"
+                   Style="{DynamicResource TextBlockStyle}" 
+                   FontSize="30"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2" 
+                   Margin="94,5,195,0"
+                   />
+
+        <Label Content="Пользователь: " 
+                   Style="{StaticResource LabelStyle}"
+                   FontSize="30" 
+                   Margin="0,40,10,0" 
+                   Grid.Row="1"/>
+
+        <TextBlock x:Name="LoginBlock"
+                   Style="{DynamicResource TextBlockStyle}" 
+                   FontSize="30" 
+                   Grid.ColumnSpan="2" 
+                   Margin="225,45,68,0" 
+                   Grid.Row="1"/>
+
+        <Button  Content="Пользователи"  FontSize="34" Style="{StaticResource ButtonStyle}" 
+                 Margin="10,48,9,72"
+                 Grid.Row="2" Click="UserButton"/>
+
+        <Button  Content="Товары"  FontSize="34" Style="{StaticResource ButtonStyle}" 
+                 Margin="10,48,9,72"
+                 Grid.Row="2" 
+                 Grid.Column="1" Click="ProductButton"/>
+
+        <Button  Content="Скидки"  FontSize="34" Style="{StaticResource ButtonStyle}" 
+                 Margin="10,48,9,72"
+                 Grid.Row="2" 
+                 Grid.Column="2" Click="DiscountButton"/>
+
+        <Button  Content="Выход"  FontSize="34" Style="{StaticResource ButtonStyle}" 
+                 Margin="77,10,9,130" 
+                 Grid.Column="2" Click="ExitButton"/>
+
+
+    </Grid>
+</Page>
